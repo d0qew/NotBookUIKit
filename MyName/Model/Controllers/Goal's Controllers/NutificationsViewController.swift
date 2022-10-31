@@ -8,7 +8,7 @@
 import UIKit
 import UserNotifications
 
-class NatificationTableViewController: UIViewController {
+class NatificationTableViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -24,11 +24,15 @@ class NatificationTableViewController: UIViewController {
                 print("Permission Denied")
             }
         }
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.hideKeyboardOnSwipeDown))
+        swipeDown.delegate = self
+        swipeDown.direction = UISwipeGestureRecognizer.Direction.down
+        self.view.addGestureRecognizer(swipeDown)
     }
     
     @IBAction func saveActionNutificatio(_ sender: Any) {
         notificationCenter.getNotificationSettings { (settings) in
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 
                 
                 let title = self.titleTF.text!
@@ -37,7 +41,7 @@ class NatificationTableViewController: UIViewController {
                 {
                     let content = UNMutableNotificationContent()
                     content.title = title
-                    content.body = "Daily Goal is waiting"
+                    content.body = "Goal is waiting..."
                     
                     let dateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
                     
@@ -83,5 +87,11 @@ class NatificationTableViewController: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMM y HH:mm"
         return formatter.string(from: date)
+    }
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    @objc func hideKeyboardOnSwipeDown() {
+        view.endEditing(true)
     }
 }
