@@ -874,11 +874,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIJ-rh-SN5">
-                                <rect key="frame" x="95" y="162" width="48" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tasks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebi-mp-ChE">
                                 <rect key="frame" x="20" y="400" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -905,7 +900,6 @@
                             <constraint firstItem="j9H-0T-Y3X" firstAttribute="trailing" secondItem="sE7-r5-SEy" secondAttribute="trailing" constant="20" id="3mO-bo-UyY"/>
                             <constraint firstItem="sE7-r5-SEy" firstAttribute="leading" secondItem="6PQ-6J-vuH" secondAttribute="trailing" constant="18" id="4sz-NO-qE4"/>
                             <constraint firstItem="Sbu-ck-eJ3" firstAttribute="top" secondItem="sE7-r5-SEy" secondAttribute="bottom" constant="8" symbolic="YES" id="523-fz-17f"/>
-                            <constraint firstItem="wIJ-rh-SN5" firstAttribute="top" secondItem="j9H-0T-Y3X" secondAttribute="top" constant="70" id="6XU-Yi-JEa"/>
                             <constraint firstItem="Tif-CI-7BF" firstAttribute="top" secondItem="6PQ-6J-vuH" secondAttribute="bottom" constant="8" symbolic="YES" id="8OD-yG-fBx"/>
                             <constraint firstItem="j9H-0T-Y3X" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sE7-r5-SEy" secondAttribute="trailing" id="FtX-eh-8DB"/>
                             <constraint firstItem="gNw-Sg-1Jr" firstAttribute="leading" secondItem="j9H-0T-Y3X" secondAttribute="leading" constant="20" id="Hfc-6h-Vng"/>
@@ -919,16 +913,14 @@
                             <constraint firstItem="j9H-0T-Y3X" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gNw-Sg-1Jr" secondAttribute="trailing" symbolic="YES" id="aCe-ce-k89"/>
                             <constraint firstItem="sE7-r5-SEy" firstAttribute="top" secondItem="j9H-0T-Y3X" secondAttribute="top" constant="202" id="cAv-6b-gn4"/>
                             <constraint firstItem="j9H-0T-Y3X" firstAttribute="trailing" secondItem="Sbu-ck-eJ3" secondAttribute="trailing" constant="20" id="cLs-K8-I2t"/>
-                            <constraint firstItem="j9H-0T-Y3X" firstAttribute="trailing" secondItem="wIJ-rh-SN5" secondAttribute="trailing" constant="271" id="cV6-cf-yni"/>
                             <constraint firstItem="j9H-0T-Y3X" firstAttribute="trailing" secondItem="ZJE-QS-9zM" secondAttribute="trailing" constant="20" id="dl7-ZY-VJ0"/>
+                            <constraint firstItem="gNw-Sg-1Jr" firstAttribute="top" secondItem="j9H-0T-Y3X" secondAttribute="top" constant="173" id="euc-f4-zuN"/>
                             <constraint firstItem="Tif-CI-7BF" firstAttribute="leading" secondItem="j9H-0T-Y3X" secondAttribute="leading" constant="20" id="fPz-cf-2tX"/>
-                            <constraint firstItem="Sbu-ck-eJ3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Tif-CI-7BF" secondAttribute="trailing" symbolic="YES" id="i55-Gx-KQK"/>
+                            <constraint firstItem="Sbu-ck-eJ3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Tif-CI-7BF" secondAttribute="trailing" constant="8" symbolic="YES" id="i55-Gx-KQK"/>
                             <constraint firstItem="LlZ-0L-ior" firstAttribute="top" secondItem="Tif-CI-7BF" secondAttribute="bottom" constant="8" symbolic="YES" id="iC6-qm-VX0"/>
                             <constraint firstItem="ZJE-QS-9zM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bSb-RV-KC1" secondAttribute="trailing" constant="8" symbolic="YES" id="j3Q-di-Kaw"/>
                             <constraint firstItem="y61-a6-T4f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tXO-Hp-IP0" secondAttribute="trailing" constant="8" symbolic="YES" id="k0k-KF-8en"/>
                             <constraint firstItem="ebi-mp-ChE" firstAttribute="top" secondItem="LlZ-0L-ior" secondAttribute="bottom" constant="17" id="lRE-oj-jjK"/>
-                            <constraint firstItem="gNw-Sg-1Jr" firstAttribute="top" secondItem="wIJ-rh-SN5" secondAttribute="bottom" constant="79" id="lRf-4S-qS6"/>
-                            <constraint firstItem="wIJ-rh-SN5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="j9H-0T-Y3X" secondAttribute="leading" id="nCy-iN-HCv"/>
                             <constraint firstItem="ebi-mp-ChE" firstAttribute="leading" secondItem="j9H-0T-Y3X" secondAttribute="leading" constant="20" id="na7-GV-ir6"/>
                             <constraint firstItem="phW-pd-F7D" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LlZ-0L-ior" secondAttribute="trailing" constant="8" symbolic="YES" id="ocG-ox-0B2"/>
                             <constraint firstItem="ZJE-QS-9zM" firstAttribute="top" secondItem="y61-a6-T4f" secondAttribute="bottom" constant="8" symbolic="YES" id="sBR-BD-3Eo"/>
@@ -975,7 +967,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="PopUpButtonCurrency" destination="7fQ-Af-vlb" id="gdP-MS-vkK"/>
-                        <outlet property="ProgressLable" destination="wIJ-rh-SN5" id="O9N-md-Wgj"/>
                         <outlet property="labelBudget" destination="phW-pd-F7D" id="Ra6-cG-zGN"/>
                         <outlet property="labelDailyGoal" destination="y61-a6-T4f" id="UaK-UM-34L"/>
                         <outlet property="labelResultMoneyGoal" destination="Sbu-ck-eJ3" id="qin-pv-N4a"/>

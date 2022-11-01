@@ -12,7 +12,14 @@ class UltimatelyViewController: UIViewController {
     
     let shapeLayer = CAShapeLayer()
     
-    @IBOutlet weak var ProgressLable: UILabel!
+    var labelResultCircle: UILabel = {
+        let label = UILabel()
+        label.text = ""
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        return label
+    }()
+    
     @IBOutlet weak var PopUpButtonCurrency: UIButton!
     @IBOutlet weak var labelResultSavedMoney: UILabel!
     @IBOutlet weak var labelResultMoneyGoal: UILabel!
@@ -58,7 +65,6 @@ class UltimatelyViewController: UIViewController {
         default:
             break
         }
-        ProgressLable.text = "\(Int(progressMoney() * 100))%"
         labelDailyGoal.text = resultGoals(dailyGoals.array)
         lableMounthlyGoal.text = resultGoals(mounthlyGoals.array)
         // Do any additional setup after loading the view.
@@ -69,8 +75,15 @@ class UltimatelyViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //circle
         let center = CGPoint(x: 100, y: 180)
+        
+        // lable результат % in cirrcle
+        
+        view.addSubview(labelResultCircle)
+        labelResultCircle.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        labelResultCircle.center = center
+        labelResultCircle.text = "\(Int(progressMoney() * 100))%"
+        
         //track layer
         let endAngePoint = circleProgress()
         print(endAngePoint)

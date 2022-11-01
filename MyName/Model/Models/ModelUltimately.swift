@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 // MARK: - TABLE VIEW 3
 
 func ultimatelyResultMoney(_ arr:[[String: Any]]) -> String{
@@ -94,5 +93,4 @@ func parsCurrency() {
         
     }.resume()
 }
-
     

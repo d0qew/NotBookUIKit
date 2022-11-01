@@ -8,7 +8,7 @@
 import UIKit
 
 class FirstGoalTableViewController: UITableViewController {
-    
+    // алерт для добавления новой цели для денег
     @IBAction func pushNewGoalMoney(_ sender: Any) {
         let alertAddNewItem = UIAlertController(title: "Create new item", message: nil, preferredStyle: .alert)
         alertAddNewItem.addTextField{(textField) in
@@ -31,6 +31,7 @@ class FirstGoalTableViewController: UITableViewController {
         alertAddNewItem.addAction(alertActionSecond)
         present(alertAddNewItem, animated: true)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -17,6 +17,7 @@ protocol FinancyProtocol {
     func removeItem(at index: Int)
     
 }
+
 // MARK: - CLASS FOR FINANCY
 
 class FinancyClass: FinancyProtocol {
