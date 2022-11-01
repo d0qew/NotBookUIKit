@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - PROTOCOL FOR GOALS
 
-protocol GoalsProtocol {
+protocol TasksProtocol {
     var key: String {get set}
     var array: [[String: Any]] {get set}
     
@@ -19,7 +19,7 @@ protocol GoalsProtocol {
     
 }
 // MARK: - CLASS FOR GOALS
-class GoalsClass: GoalsProtocol {
+class TasksClass: TasksProtocol {
     
     var key: String
     var array: [[String : Any]]{
@@ -56,7 +56,7 @@ class GoalsClass: GoalsProtocol {
     
 }
 // MARK: - TABLE VIEW 2.1
-var dailyGoals = GoalsClass(key: "dailyGoalsDataKey")
+var dailyTasks = TasksClass(key: "dailyTasksDataKey")
 
 
 
@@ -64,5 +64,5 @@ var dailyGoals = GoalsClass(key: "dailyGoalsDataKey")
 
 
 // MARK: - TABLE VIEW 2.2
-var mounthlyGoals = GoalsClass(key: "mounthlyGoalsDataKey")
+var monthlyTasks = TasksClass(key: "mounthlyTasksDataKey")
 

@@ -21,7 +21,7 @@ class SecondTableViewController: UITableViewController {
         let alertActionSecond =  UIAlertAction(title: "Add", style: .cancel) { (alert) in
             // create new
             let newItemDaily = alertAddNewItem.textFields![0].text
-            dailyGoals.addItem(nameItem: newItemDaily!)
+            dailyTasks.addItem(nameItem: newItemDaily!)
             
             self.tableView.reloadData()
         }
@@ -44,14 +44,14 @@ class SecondTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return dailyGoals.array.count
+        return dailyTasks.array.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         
-        let current = dailyGoals.array[indexPath.row]
+        let current = dailyTasks.array[indexPath.row]
         cell.textLabel?.text = current["nameGoals"] as? String
         
         if (current["isCompleted"] as? Bool) == true {
@@ -76,7 +76,7 @@ class SecondTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            dailyGoals.removeItem(at: indexPath.row)
+            dailyTasks.removeItem(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -86,21 +86,21 @@ class SecondTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
-        if dailyGoals.changeStateGoal(at: indexPath.row){
+        if dailyTasks.changeStateGoal(at: indexPath.row){
             tableView.cellForRow(at: indexPath)?.imageView?.image = #imageLiteral(resourceName: "check.png")
             tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .lightGray
-            let current = dailyGoals.array[indexPath.row]
+            let current = dailyTasks.array[indexPath.row]
             let movedTask = current
-            dailyGoals.array.remove(at: indexPath.row)
-            dailyGoals.array.append(movedTask)
+            dailyTasks.array.remove(at: indexPath.row)
+            dailyTasks.array.append(movedTask)
             
         }else {
             tableView.cellForRow(at: indexPath)?.imageView?.image = #imageLiteral(resourceName: "uncheck")
             tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .black
-            let current = dailyGoals.array[indexPath.row]
+            let current = dailyTasks.array[indexPath.row]
             let movedTask = current
-            dailyGoals.array.remove(at: indexPath.row)
-            dailyGoals.array.insert(movedTask, at: 0)
+            dailyTasks.array.remove(at: indexPath.row)
+            dailyTasks.array.insert(movedTask, at: 0)
         }
         tableView.reloadSections( IndexSet(arrayLiteral: indexPath.section), with: .automatic)
     }

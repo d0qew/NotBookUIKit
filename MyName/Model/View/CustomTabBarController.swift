@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// кастомный класс, для выдачи нужного начального экрана
 class CustomTabBarController: UITabBarController
 {
     @IBInspectable var initialIndex : Int = 0

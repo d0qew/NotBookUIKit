@@ -9,6 +9,7 @@ import Foundation
 
 // MARK: - TABLE VIEW 3
 
+// Сумма всех элементов словаря, который включает в себя денежный элемент
 func ultimatelyResultMoney(_ arr:[[String: Any]]) -> String{
     var result: Int = 0
     if !arr.isEmpty {
@@ -21,7 +22,7 @@ func ultimatelyResultMoney(_ arr:[[String: Any]]) -> String{
     }
 }
 
-
+// Вычисление сколько элементоов словаря имеет значениеи isCompleted == true
 func resultGoals(_ arr:[[String : Any]]) -> String{
     var result: Int = 0
     if !arr.isEmpty {
@@ -36,11 +37,12 @@ func resultGoals(_ arr:[[String : Any]]) -> String{
     }
 }
 
+// Вычисление бюджета
 func resultBudget() -> String{
     String(Int(ultimatelyResultMoney(incomeMoney.array))! - Int(ultimatelyResultMoney(expensesMoney.array))!)
 }
 
-
+// Вычисление проверки, выдачи Alert(Купон)
 func rersultForAlert() -> Bool{
     if Int(ultimatelyResultMoney(goalMoney.array))! != 0 {
         return Int(ultimatelyResultMoney(savedMoneyProduct.array))! >= Int(ultimatelyResultMoney(goalMoney.array))!
@@ -49,7 +51,7 @@ func rersultForAlert() -> Bool{
     }
 }
 
-
+// Вычисление сколько накоплено денег по отношенибю к цели
 func progressMoney() -> Float{
     if Float(ultimatelyResultMoney(goalMoney.array))! > 0 {
         return Float(ultimatelyResultMoney(savedMoneyProduct.array))! / Float(ultimatelyResultMoney(goalMoney.array))!
@@ -70,6 +72,7 @@ struct ValueMoney: Decodable{
 var currency = "RUB"
 var valueUSD: Double?
 var valueEUR: Double?
+
 func parsCurrency() {
     guard let url = URL(string: "https://webservice.1prime.ru/pttable?host=1prime.ru&encoding=utf-8&template=prime_gold_site3_jsonp&time=14739380") else {return}
     

@@ -31,15 +31,14 @@ class UltimatelyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
-        
-        //error pars
+        //error pars(сервер упал, либо подключение к интернету отстутвует)
         let alertControllerError = UIAlertController(title: "Error", message: "Problems connecting to the server! \n Check internet connection.", preferredStyle: .alert)
         let alertActionOK =  UIAlertAction(title: "OK", style: .default) {(alert) in
         }
         alertControllerError.addAction(alertActionOK)
         
         switch currency{
+            
         case "RUB":
             labelResultSavedMoney.text = ultimatelyResultMoney(savedMoneyProduct.array) + " \u{20bd}"
             labelResultMoneyGoal.text = ultimatelyResultMoney(goalMoney.array) + " \u{20bd}"
@@ -65,8 +64,8 @@ class UltimatelyViewController: UIViewController {
         default:
             break
         }
-        labelDailyGoal.text = resultGoals(dailyGoals.array)
-        lableMounthlyGoal.text = resultGoals(mounthlyGoals.array)
+        labelDailyGoal.text = resultGoals(dailyTasks.array)
+        lableMounthlyGoal.text = resultGoals(monthlyTasks.array)
         // Do any additional setup after loading the view.
     }
     
@@ -117,8 +116,8 @@ class UltimatelyViewController: UIViewController {
         basicAnimation.isRemovedOnCompletion = false
         
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
-        // end circle
         
+        // выбор валюты, в которой будут отражаться обработанные данные
         currency = "RUB"
         viewDidLoad()
         

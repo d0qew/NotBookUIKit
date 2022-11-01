@@ -41,7 +41,7 @@ class NatificationTableViewController: UIViewController, UIGestureRecognizerDele
                 {
                     let content = UNMutableNotificationContent()
                     content.title = title
-                    content.body = "Goal is waiting..."
+                    content.body = "Task is waiting..."
                     
                     let dateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
                     

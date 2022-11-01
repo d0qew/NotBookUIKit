@@ -909,12 +909,12 @@
                             <constraint firstItem="y61-a6-T4f" firstAttribute="top" secondItem="phW-pd-F7D" secondAttribute="bottom" constant="47" id="Tp8-hO-86W"/>
                             <constraint firstItem="tXO-Hp-IP0" firstAttribute="leading" secondItem="j9H-0T-Y3X" secondAttribute="leading" constant="20" id="UiP-sF-eZa"/>
                             <constraint firstItem="LlZ-0L-ior" firstAttribute="leading" secondItem="j9H-0T-Y3X" secondAttribute="leading" constant="20" id="VKP-Ga-ovA"/>
+                            <constraint firstItem="gNw-Sg-1Jr" firstAttribute="top" secondItem="j9H-0T-Y3X" secondAttribute="top" constant="173" id="Xrr-uB-Lbv"/>
                             <constraint firstItem="bSb-RV-KC1" firstAttribute="leading" secondItem="j9H-0T-Y3X" secondAttribute="leading" constant="20" id="YPc-IL-Qef"/>
                             <constraint firstItem="j9H-0T-Y3X" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gNw-Sg-1Jr" secondAttribute="trailing" symbolic="YES" id="aCe-ce-k89"/>
                             <constraint firstItem="sE7-r5-SEy" firstAttribute="top" secondItem="j9H-0T-Y3X" secondAttribute="top" constant="202" id="cAv-6b-gn4"/>
                             <constraint firstItem="j9H-0T-Y3X" firstAttribute="trailing" secondItem="Sbu-ck-eJ3" secondAttribute="trailing" constant="20" id="cLs-K8-I2t"/>
                             <constraint firstItem="j9H-0T-Y3X" firstAttribute="trailing" secondItem="ZJE-QS-9zM" secondAttribute="trailing" constant="20" id="dl7-ZY-VJ0"/>
-                            <constraint firstItem="gNw-Sg-1Jr" firstAttribute="top" secondItem="j9H-0T-Y3X" secondAttribute="top" constant="173" id="euc-f4-zuN"/>
                             <constraint firstItem="Tif-CI-7BF" firstAttribute="leading" secondItem="j9H-0T-Y3X" secondAttribute="leading" constant="20" id="fPz-cf-2tX"/>
                             <constraint firstItem="Sbu-ck-eJ3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Tif-CI-7BF" secondAttribute="trailing" constant="8" symbolic="YES" id="i55-Gx-KQK"/>
                             <constraint firstItem="LlZ-0L-ior" firstAttribute="top" secondItem="Tif-CI-7BF" secondAttribute="bottom" constant="8" symbolic="YES" id="iC6-qm-VX0"/>
@@ -950,7 +950,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" id="ufA-tp-CRs">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" id="7fQ-Af-vlb">
-                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <rect key="frame" x="32" y="5" width="20" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <menu key="menu" id="h4v-F3-zKi">
                                     <children>

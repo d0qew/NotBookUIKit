@@ -20,7 +20,7 @@ class SecondMounthTableViewController: UITableViewController {
             // create new
             let newItemMounthly = alertAddNewItem.textFields![0].text
             
-            mounthlyGoals.addItem(nameItem: newItemMounthly!)
+            monthlyTasks.addItem(nameItem: newItemMounthly!)
             
             self.tableView.reloadData()
         }
@@ -42,12 +42,12 @@ class SecondMounthTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return mounthlyGoals.array.count
+        return monthlyTasks.array.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Identifier", for: indexPath)
-        let current = mounthlyGoals.array[indexPath.row]
+        let current = monthlyTasks.array[indexPath.row]
         cell.textLabel?.text = current["nameGoals"] as? String
         
         if (current["isCompleted"] as? Bool) == true {
@@ -73,7 +73,7 @@ class SecondMounthTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            mounthlyGoals.removeItem(at: indexPath.row)
+            monthlyTasks.removeItem(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
@@ -83,21 +83,21 @@ class SecondMounthTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
-        if mounthlyGoals.changeStateGoal(at: indexPath.row){
+        if monthlyTasks.changeStateGoal(at: indexPath.row){
             tableView.cellForRow(at: indexPath)?.imageView?.image = #imageLiteral(resourceName: "check.png")
             tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .lightGray
-            let current = mounthlyGoals.array[indexPath.row]
+            let current = monthlyTasks.array[indexPath.row]
             let movedTask = current
-            mounthlyGoals.array.remove(at: indexPath.row)
-            mounthlyGoals.array.append(movedTask)
+            monthlyTasks.array.remove(at: indexPath.row)
+            monthlyTasks.array.append(movedTask)
             
         }else {
             tableView.cellForRow(at: indexPath)?.imageView?.image = #imageLiteral(resourceName: "uncheck")
             tableView.cellForRow(at: indexPath)?.textLabel?.textColor = .black
-            let current = mounthlyGoals.array[indexPath.row]
+            let current = monthlyTasks.array[indexPath.row]
             let movedTask = current
-            mounthlyGoals.array.remove(at: indexPath.row)
-            mounthlyGoals.array.insert(movedTask, at: 0)
+            monthlyTasks.array.remove(at: indexPath.row)
+            monthlyTasks.array.insert(movedTask, at: 0)
             
         }
         tableView.reloadSections( IndexSet(arrayLiteral: indexPath.section), with: .automatic)
