@@ -30,40 +30,9 @@ class UltimatelyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // выбор валюты с последующем ввыводом на экран
+        switchCurrrecy()
         
-        //error pars(сервер упал, либо подключение к интернету отстутвует)
-        let alertControllerError = UIAlertController(title: "Error", message: "Problems connecting to the server! \n Check internet connection.", preferredStyle: .alert)
-        let alertActionOK =  UIAlertAction(title: "OK", style: .default) {(alert) in
-        }
-        alertControllerError.addAction(alertActionOK)
-        
-        switch currency{
-            
-        case "RUB":
-            labelResultSavedMoney.text = ultimatelyResultMoney(savedMoneyProduct.array) + " \u{20bd}"
-            labelResultMoneyGoal.text = ultimatelyResultMoney(goalMoney.array) + " \u{20bd}"
-            labelBudget.text = resultBudget() + " \u{20bd}"
-            
-        case "EUR":
-            if valueEUR != nil{
-                labelResultSavedMoney.text = String(Int((Double(ultimatelyResultMoney(savedMoneyProduct.array))!) / valueEUR!)) + " \u{20ac}"
-                labelResultMoneyGoal.text =  String(Int((Double(ultimatelyResultMoney(goalMoney.array))!) / valueEUR!)) + " \u{20ac}"
-                labelBudget.text =  String(Int((Double(resultBudget())!) / valueEUR!)) + " \u{20ac}"
-                
-            }else{
-                present(alertControllerError, animated: true)
-            }
-        case "USD":
-            if valueUSD != nil{
-                labelResultSavedMoney.text = String(Int((Double(ultimatelyResultMoney(savedMoneyProduct.array))!) / valueUSD!)) + " \u{0024}"
-                labelResultMoneyGoal.text = String(Int((Double(ultimatelyResultMoney(goalMoney.array))!) / valueUSD!)) + " \u{0024}"
-                labelBudget.text = String(Int((Double(resultBudget())!) / valueUSD!)) + " \u{0024}"
-            }else{
-                present(alertControllerError, animated: true)
-            }
-        default:
-            break
-        }
         labelDailyGoal.text = resultGoals(dailyTasks.array)
         lableMounthlyGoal.text = resultGoals(monthlyTasks.array)
         // Do any additional setup after loading the view.
@@ -73,7 +42,43 @@ class UltimatelyViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // standart value for currency
+        currency = "RUB"
         
+        drawCircle()
+        
+        // выбор валюты, в которой будут отражаться обработанные данные
+        viewDidLoad()
+        setPopUpButton()
+        
+        
+        if rersultForAlert()
+        {
+            let alertControllerUl = UIAlertController(title: "Good job", message: "You can buy sweets or \n add new Goal for money!", preferredStyle: .alert)
+            let alertActionFirstUl =  UIAlertAction(title: "OK", style: .default) {(alert) in
+                
+            }
+            alertControllerUl.addAction(alertActionFirstUl)
+            present(alertControllerUl, animated: true)
+        }
+    }
+    
+    
+    private func setPopUpButton() {
+        let optionClosure = {(action : UIAction) in
+            currency = action.title
+            self.viewDidLoad()
+        }
+        PopUpButtonCurrency.menu = UIMenu(children : [
+            UIAction(title: "RUB", state: . on, handler: optionClosure),
+            UIAction(title: "USD", handler: optionClosure),
+            UIAction(title: "EUR", handler: optionClosure)
+        ])
+        PopUpButtonCurrency.showsMenuAsPrimaryAction = true
+        PopUpButtonCurrency.changesSelectionAsPrimaryAction = true
+    }
+    
+    private func drawCircle() {
         let center = CGPoint(x: 100, y: 180)
         
         // lable результат % in cirrcle
@@ -116,39 +121,44 @@ class UltimatelyViewController: UIViewController {
         basicAnimation.isRemovedOnCompletion = false
         
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
+    }
+    
+    private func switchCurrrecy() {
         
-        // выбор валюты, в которой будут отражаться обработанные данные
-        currency = "RUB"
-        viewDidLoad()
+        //error pars(сервер упал, либо подключение к интернету отстутвует)
+        let alertControllerError = UIAlertController(title: "Error", message: "Problems connecting to the server! \n Check internet connection.", preferredStyle: .alert)
+        let alertActionOK =  UIAlertAction(title: "OK", style: .default) {(alert) in
+        }
+        alertControllerError.addAction(alertActionOK)
         
-        setPopUpButton()
-        
-        
-        if rersultForAlert()
-        {
-            let alertControllerUl = UIAlertController(title: "Good job", message: "You can buy sweets or \n add new Goal for money!", preferredStyle: .alert)
-            let alertActionFirstUl =  UIAlertAction(title: "OK", style: .default) {(alert) in
+        switch currency{
+            
+        case "RUB":
+            labelResultSavedMoney.text = ultimatelyResultMoney(savedMoneyProduct.array) + " \u{20bd}"
+            labelResultMoneyGoal.text = ultimatelyResultMoney(goalMoney.array) + " \u{20bd}"
+            labelBudget.text = resultBudget() + " \u{20bd}"
+            
+        case "EUR":
+            if valueEUR != nil{
+                labelResultSavedMoney.text = String(Int((Double(ultimatelyResultMoney(savedMoneyProduct.array))!) / valueEUR!)) + " \u{20ac}"
+                labelResultMoneyGoal.text =  String(Int((Double(ultimatelyResultMoney(goalMoney.array))!) / valueEUR!)) + " \u{20ac}"
+                labelBudget.text =  String(Int((Double(resultBudget())!) / valueEUR!)) + " \u{20ac}"
                 
+            }else{
+                present(alertControllerError, animated: true)
             }
-            alertControllerUl.addAction(alertActionFirstUl)
-            present(alertControllerUl, animated: true)
+        case "USD":
+            if valueUSD != nil{
+                labelResultSavedMoney.text = String(Int((Double(ultimatelyResultMoney(savedMoneyProduct.array))!) / valueUSD!)) + " \u{0024}"
+                labelResultMoneyGoal.text = String(Int((Double(ultimatelyResultMoney(goalMoney.array))!) / valueUSD!)) + " \u{0024}"
+                labelBudget.text = String(Int((Double(resultBudget())!) / valueUSD!)) + " \u{0024}"
+            }else{
+                present(alertControllerError, animated: true)
+            }
+        default:
+            break
         }
     }
     
-    
-    func setPopUpButton()
-    {
-        let optionClosure = {(action : UIAction) in
-            currency = action.title
-            self.viewDidLoad()
-        }
-        PopUpButtonCurrency.menu = UIMenu(children : [
-            UIAction(title: "RUB", state: . on, handler: optionClosure),
-            UIAction(title: "USD", handler: optionClosure),
-            UIAction(title: "EUR", handler: optionClosure)
-        ])
-        PopUpButtonCurrency.showsMenuAsPrimaryAction = true
-        PopUpButtonCurrency.changesSelectionAsPrimaryAction = true
-    }
 }
 
