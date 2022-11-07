@@ -9,10 +9,11 @@ import UIKit
 
 class InstructionViewController: UIViewController {
     
+    @IBOutlet var textInstruction3: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        textInstruction3.text = NSLocalizedString("textInstruction3", comment: "")
     }
     
     @IBAction func backToRoot(_ sender: UIButton) {

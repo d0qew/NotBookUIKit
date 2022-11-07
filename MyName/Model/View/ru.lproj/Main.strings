@@ -1,0 +1,189 @@
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "0Lh-C5-fVn"; */
+"0Lh-C5-fVn.title" = "Назад";
+
+/* Class = "UILabel"; text = "Goals for money"; ObjectID = "0eQ-YJ-GPO"; */
+"0eQ-YJ-GPO.text" = "Денежные цели";
+
+/* Class = "UIButton"; configuration.title = "Next"; ObjectID = "17V-Jz-5Iv"; */
+"17V-Jz-5Iv.configuration.title" = "Далее";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "17V-Jz-5Iv"; */
+"17V-Jz-5Iv.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Daily Tasks"; ObjectID = "2Eu-hK-HbX"; */
+"2Eu-hK-HbX.title" = "Дневные задачи";
+
+/* Class = "UITextField"; placeholder = "Title fof Natification"; ObjectID = "2gT-mE-ICI"; */
+"2gT-mE-ICI.placeholder" = "Заголовок для уведомления";
+
+/* Class = "UITextView"; text = "This section swhows all your activity in thee application. Everythingg that you have entered wil be processed and will be shown in this section."; ObjectID = "31U-6B-TOV"; */
+"31U-6B-TOV.text" = "В этом разделе отображается вся ваша активность в приложении. Все, что вы ввели, будет обработано и будет показано в этом разделе.";
+
+/* Class = "UINavigationItem"; title = "Finance"; ObjectID = "3Jc-LL-oKb"; */
+"3Jc-LL-oKb.title" = "Финансы";
+
+/* Class = "UITableViewSection"; headerTitle = "Finance"; ObjectID = "4RG-2F-aHs"; */
+"4RG-2F-aHs.headerTitle" = "Финансы";
+
+/* Class = "UITextView"; text = "This section will help you organize your cases, and you can also remind yourself of the case with a notification."; ObjectID = "5MD-us-0VS"; */
+"5MD-us-0VS.text" = "Этот раздел поможет вам упорядочить дела, а также вы сможете напомнить себе о деле уведомлением.";
+
+/* Class = "UILabel"; text = "All Saved Money :"; ObjectID = "6PQ-6J-vuH"; */
+"6PQ-6J-vuH.text" = "Всего сэкономлено :";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "7fQ-Af-vlb"; */
+"7fQ-Af-vlb.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7fQ-Af-vlb"; */
+"7fQ-Af-vlb.normalTitle" = "Button";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "9Pm-zg-Bjf"; */
+"9Pm-zg-Bjf.title" = "Item";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "ALa-sP-yZS"; */
+"ALa-sP-yZS.title" = "Назад";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "AhS-ar-rtZ"; */
+"AhS-ar-rtZ.title" = "Назад";
+
+/* Class = "UILabel"; text = "Income"; ObjectID = "CHn-tR-ebd"; */
+"CHn-tR-ebd.text" = "Доход";
+
+/* Class = "UINavigationItem"; title = "Saved money"; ObjectID = "DGc-LW-z3g"; */
+"DGc-LW-z3g.title" = "Экономия";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Dqc-MP-S0H"; */
+"Dqc-MP-S0H.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Ultimately"; ObjectID = "HMy-Rx-3ST"; */
+"HMy-Rx-3ST.title" = "Главная";
+
+/* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "IzN-1a-itY"; */
+"IzN-1a-itY.title" = "Задачи";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Ker-ey-h1d"; */
+"Ker-ey-h1d.title" = "Item";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "LP3-oQ-r7C"; */
+"LP3-oQ-r7C.text" = "Title";
+
+/* Class = "UILabel"; text = "Budget:"; ObjectID = "LlZ-0L-ior"; */
+"LlZ-0L-ior.text" = "Бюджет :";
+
+/* Class = "UIButton"; configuration.title = "OK"; ObjectID = "Lu9-AO-kKY"; */
+"Lu9-AO-kKY.configuration.title" = "OK";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Lu9-AO-kKY"; */
+"Lu9-AO-kKY.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Mjx-KY-TT3"; */
+"Mjx-KY-TT3.text" = "Title";
+
+/* Class = "UIButton"; configuration.title = "Next"; ObjectID = "Pcq-eB-OUJ"; */
+"Pcq-eB-OUJ.configuration.title" = "Далее";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Pcq-eB-OUJ"; */
+"Pcq-eB-OUJ.normalTitle" = "Button";
+
+/* Class = "UITableViewSection"; headerTitle = "Tasks"; ObjectID = "RwG-ts-32q"; */
+"RwG-ts-32q.headerTitle" = "Задачи";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Sbu-ck-eJ3"; */
+"Sbu-ck-eJ3.text" = "Label";
+
+/* Class = "UILabel"; text = "Goal Money:"; ObjectID = "Tif-CI-7BF"; */
+"Tif-CI-7BF.text" = "Денежные цели :";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "U3A-qu-4kC"; */
+"U3A-qu-4kC.title" = "Назад";
+
+/* Class = "UILabel"; text = "Expenses"; ObjectID = "UXJ-v6-2As"; */
+"UXJ-v6-2As.text" = "Расход";
+
+/* Class = "UILabel"; text = "Daily tasks"; ObjectID = "Vuv-0Q-Kgr"; */
+"Vuv-0Q-Kgr.text" = "Дневные задачи";
+
+/* Class = "UILabel"; text = "Saved money"; ObjectID = "WPx-Ds-OVr"; */
+"WPx-Ds-OVr.text" = "Экономия";
+
+/* Class = "UIButton"; configuration.title = "Save"; ObjectID = "Wl2-YQ-9xi"; */
+"Wl2-YQ-9xi.configuration.title" = "Сохранить";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Wl2-YQ-9xi"; */
+"Wl2-YQ-9xi.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ZJE-QS-9zM"; */
+"ZJE-QS-9zM.text" = "Label";
+
+/* Class = "UILabel"; text = "What is Finance?"; ObjectID = "ZTb-Sb-Afc"; */
+"ZTb-Sb-Afc.text" = "Что такое Финансы?";
+
+/* Class = "UILabel"; text = "Mounthly tasks"; ObjectID = "ard-0k-vTu"; */
+"ard-0k-vTu.text" = "Задачи месяца";
+
+/* Class = "UICommand"; title = "Item 1"; ObjectID = "as0-e1-reT"; */
+"as0-e1-reT.title" = "Item 1";
+
+/* Class = "UILabel"; text = "Monthly Tasks Completed:"; ObjectID = "bSb-RV-KC1"; */
+"bSb-RV-KC1.text" = "Выполенено задач месяца :";
+
+/* Class = "UINavigationItem"; title = "Natification"; ObjectID = "blk-5S-vz8"; */
+"blk-5S-vz8.title" = "Напоминание";
+
+/* Class = "UILabel"; text = "Tasks"; ObjectID = "ebi-mp-ChE"; */
+"ebi-mp-ChE.text" = "Задачи";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "emu-2f-LEM"; */
+"emu-2f-LEM.text" = "Title";
+
+/* Class = "UILabel"; text = "Financy"; ObjectID = "gNw-Sg-1Jr"; */
+"gNw-Sg-1Jr.text" = "Финансы";
+
+/* Class = "UINavigationItem"; title = "Income"; ObjectID = "iEM-Tg-qgV"; */
+"iEM-Tg-qgV.title" = "Доход";
+
+/* Class = "UILabel"; text = "What is Tasks?"; ObjectID = "iWo-mO-EE6"; */
+"iWo-mO-EE6.text" = "Что такое задачи?";
+
+/* Class = "UINavigationItem"; title = "Expenses"; ObjectID = "jIz-h4-ged"; */
+"jIz-h4-ged.title" = "Расход";
+
+/* Class = "UIBarButtonItem"; title = "Help"; ObjectID = "jTF-Tx-V9Y"; */
+"jTF-Tx-V9Y.title" = "Помощь";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "l3D-oG-kPv"; */
+"l3D-oG-kPv.text" = "Title";
+
+/* Class = "UINavigationItem"; title = "Mounthly Tasks"; ObjectID = "ngg-cW-X2w"; */
+"ngg-cW-X2w.title" = "Задачи месяца";
+
+/* Class = "UICommand"; title = "Item 2"; ObjectID = "oPj-7N-VwM"; */
+"oPj-7N-VwM.title" = "Item 2";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "phW-pd-F7D"; */
+"phW-pd-F7D.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Goal for Money"; ObjectID = "qEt-pF-rdD"; */
+"qEt-pF-rdD.title" = "Денежная цель";
+
+/* Class = "UITextView"; text = "In this section, you will practice financial literacy. This section will help you deal with your finances!"; ObjectID = "rTu-38-Dqu"; */
+"rTu-38-Dqu.text" = "В этом разделе вы будете практиковать финансовую грамотность. Этот раздел поможет вам разобраться с вашими финансами!";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "sE7-r5-SEy"; */
+"sE7-r5-SEy.text" = "Label";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "scU-th-5PR"; */
+"scU-th-5PR.text" = "Title";
+
+/* Class = "UILabel"; text = "Daily Tasks Completed:"; ObjectID = "tXO-Hp-IP0"; */
+"tXO-Hp-IP0.text" = "Выполнено задач дня:";
+
+/* Class = "UILabel"; text = "What is Ultimately?"; ObjectID = "vrd-uc-A72"; */
+"vrd-uc-A72.text" = "Что такое Главная?";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "w3K-QB-nc0"; */
+"w3K-QB-nc0.title" = "Назад";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "y61-a6-T4f"; */
+"y61-a6-T4f.text" = "Label";

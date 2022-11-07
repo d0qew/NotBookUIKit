@@ -10,13 +10,13 @@ import UIKit
 class SecondMounthTableViewController: UITableViewController {
     
     @IBAction func pushNewGoal(_ sender: Any) {
-        let alertAddNewItem = UIAlertController(title: "Create new item", message: nil, preferredStyle: .alert)
+        let alertAddNewItem = UIAlertController(title: NSLocalizedString("textCreateItem", comment: ""), message: nil, preferredStyle: .alert)
         alertAddNewItem.addTextField{(textField) in
-            textField.placeholder = "New mounthly task"
+            textField.placeholder = NSLocalizedString("textNewMonthlyTask", comment: "")
         }
-        let alertActionFirst =  UIAlertAction(title: "Cancel", style: .default) { (alert) in
+        let alertActionFirst =  UIAlertAction(title: NSLocalizedString("textCancel", comment: ""), style: .default) { (alert) in
         }
-        let alertActionSecond =  UIAlertAction(title: "Add", style: .cancel) { (alert) in
+        let alertActionSecond =  UIAlertAction(title: NSLocalizedString("textAdd", comment: ""), style: .cancel) { (alert) in
             // create new
             let newItemMounthly = alertAddNewItem.textFields![0].text
             

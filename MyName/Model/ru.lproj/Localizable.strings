@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  MyName
+
+  Created by Daniil Konashenko on 07.11.2022.
+  
+*/
+
+//common
+"textCreateItem" = "Создать новый элемент";
+"textAdd" = "Добавить";
+"textCancel" = "Отмена";
+"textSettings" = "Настройки";
+
+//for tview 1.1
+"textNewProduct" = "Новый продукт";
+"textPriceProduct" = "Цена продукта";
+//for tview 1.2
+"textNewGoal" = "Новая цель";
+"textPriceGoal" = "Цена цели";
+//for tview 1.3
+"textNewIncome" = "Новый доход";
+"textPriceIncome" = "Цена дохода";
+//for tview 1.4
+"textNewExpenses" = "Новый расход";
+"textPriceExpenses" = "Цена расхода";
+//for tview 2.1
+"textNewDailyTask" = "Новая задача дня";
+//for tview 2.2
+"textNewMonthlyTask" = "Новая задача месяца";
+
+//for errorAlerrt
+"textOops" = "Упс...";
+"textProblem" = "Проблемы с подключением к серверу! \n Проверьте интернет соединение.";
+
+//for cuponAlert
+"textCupon" = "Хорошая работа";
+"textAboutCupon" = "Вы можете купить конфеты или \n добавить новую денежную цель!";
+
+//for natifications
+"textBody" = "Задача ожидает выполнения";
+"textAlertTitle" = "Напоминание сохранено";
+"textAlertBody" = "Сохранено на ";
+
+"textAlertTitle1" = "Включить уведомления?";
+"textAlertBody1" = "Чтобы использовать эту функцию, вы должны включить уведомления в настройках.";
+
+//for instrucktion
+"textInstruction1" = "В этом разделе вы будете практиковать финансовую грамотность. Этот раздел поможет вам разобраться с вашими финансами!";
+"textInstruction2" = "Этот раздел поможет вам упорядочить дела, а также вы сможете напомнить себе о деле уведомлением.";
+"textInstruction3" = "В этом разделе отображается вся ваша активность в приложении. Все, что вы ввели, будет обработано и будет показано в этом разделе.";

@@ -19,22 +19,21 @@ protocol TasksProtocol {
     
 }
 // MARK: - CLASS FOR GOALS
+
 class TasksClass: TasksProtocol {
     
     var key: String
     var array: [[String : Any]]{
-        set
-        {
-            UserDefaults.standard.set(newValue, forKey: key)
-            UserDefaults.standard.synchronize()
-        }
-        get
-        {
+        get{
             if let array = UserDefaults.standard.array(forKey: key) as? [[String : Any]] {
                 return array
             }else {
                 return []
             }
+        }
+        set{
+            UserDefaults.standard.set(newValue, forKey: key)
+            UserDefaults.standard.synchronize()
         }
     }
     
@@ -53,7 +52,6 @@ class TasksClass: TasksProtocol {
     init(key: String) {
         self.key = key
     }
-    
 }
 // MARK: - TABLE VIEW 2.1
 var dailyTasks = TasksClass(key: "dailyTasksDataKey")

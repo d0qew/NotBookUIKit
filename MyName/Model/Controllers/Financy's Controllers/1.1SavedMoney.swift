@@ -12,16 +12,16 @@ class FirstTableViewController: UITableViewController {
     @IBAction func pushAddAction(_ sender: Any) {
         
         
-        let alertAddNewItem = UIAlertController(title: "Create new item", message: nil, preferredStyle: .alert)
+        let alertAddNewItem = UIAlertController(title: NSLocalizedString("textCreateItem", comment: ""), message: nil, preferredStyle: .alert)
         alertAddNewItem.addTextField{(textField) in
-            textField.placeholder = "New Product"
+            textField.placeholder = NSLocalizedString("textNewProduct", comment: "") 
         }
         alertAddNewItem.addTextField{(money) in
-            money.placeholder = "Price Product's"
+            money.placeholder = NSLocalizedString("textPriceProduct", comment: "")
         }
-        let alertActionFirst =  UIAlertAction(title: "Cancel", style: .default) { (alert) in
+        let alertActionFirst =  UIAlertAction(title: NSLocalizedString("textCancel", comment: ""), style: .default) { (alert) in
         }
-        let alertActionSecond =  UIAlertAction(title: "Add", style: .cancel) { (alert) in
+        let alertActionSecond =  UIAlertAction(title: NSLocalizedString("textAdd", comment: ""), style: .cancel) { (alert) in
             // create new
             let newItemName = alertAddNewItem.textFields![0].text
             let newItemPrice = alertAddNewItem.textFields![1].text

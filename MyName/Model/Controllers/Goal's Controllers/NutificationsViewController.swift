@@ -41,7 +41,7 @@ class NatificationTableViewController: UIViewController, UIGestureRecognizerDele
                 {
                     let content = UNMutableNotificationContent()
                     content.title = title
-                    content.body = "Task is waiting..."
+                    content.body = NSLocalizedString("textBody", comment: "")
                     
                     let dateComp = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
                     
@@ -54,14 +54,14 @@ class NatificationTableViewController: UIViewController, UIGestureRecognizerDele
                             return
                         }
                     }
-                    let ac = UIAlertController(title: "Notification Save", message: "At " + self.formattedDate(date: date) , preferredStyle: .alert)
+                    let ac = UIAlertController(title: NSLocalizedString("textAlertTitle", comment: ""), message: NSLocalizedString("textAlertBody", comment: "") + self.formattedDate(date: date) , preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "OK", style: .default))
                     self.present(ac, animated: true)
                 }
                 else
                 {
-                    let ac = UIAlertController(title: "Enable Notifications?", message: "To use this feature you must enable notifacations in settings", preferredStyle: .alert)
-                    let goToSettings = UIAlertAction(title: "Settings", style: .default)
+                    let ac = UIAlertController(title: NSLocalizedString("textAlertTitle1", comment: ""), message: NSLocalizedString("textAlertBody1", comment: ""), preferredStyle: .alert)
+                    let goToSettings = UIAlertAction(title: NSLocalizedString("textSettings", comment: ""), style: .default)
                     {
                         (_) in
                         guard let settingsURL = URL(string: UIApplication.openSettingsURLString)
@@ -75,7 +75,7 @@ class NatificationTableViewController: UIViewController, UIGestureRecognizerDele
                         }
                     }
                     ac.addAction(goToSettings)
-                    ac.addAction(UIAlertAction(title: "Cancel", style: .default))
+                    ac.addAction(UIAlertAction(title: NSLocalizedString("textCancel", comment: ""), style: .default))
                     self.present(ac, animated: true)
                 }
             }

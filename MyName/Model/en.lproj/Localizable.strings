@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  MyName
+
+  Created by Daniil Konashenko on 07.11.2022.
+  
+*/
+
+//common
+"textCreateItem" = "Create new Item";
+"textAdd" = "Add";
+"textCancel" = "Cancel";
+"textSettings" = "Settings";
+//for tview 1.1
+"textNewProduct" = "New Product";
+"textPriceProduct" = "Product's price";
+//for tview 1.2
+"textNewGoal" = "New Goal";
+"textPriceGoal" = "Goal's price";
+//for tview 1.3
+"textNewIncome" = "New Income";
+"textPriceIncome" = "Income's price";
+//for tview 1.4
+"textNewExpenses" = "New Expenses";
+"textPriceExpenses" = "Expense's price";
+//for tview 2.1
+"textNewDailyTask" = "New daily task";
+//for tview 2.2
+"textNewMonthlyTask" = "New monthly task";
+
+//for errorAlerrt
+"textOops" = "Oops...";
+"textProblem" = "Problems connecting to the server! \n Check internet connection.";
+
+//for cuponAlert
+"textCupon" = "Good job";
+"textAboutCupon" = "You can buy sweets or \n add new Goal for money!";
+
+//for natifications
+"textBody" = "Task is waiting...";
+"textAlertTitle" = "Notification Save";
+"textAlertBody" = "At ";
+
+"textAlertTitle1" = "Enable Notifications?";
+"textAlertBody1" = "To use this feature you must enable notifacations in settings";
+
+//for instrucktion
+"textInstruction1" = "In this section, you will practice financial literacy. This section will help you deal with your finances!";
+"textInstruction2" = "This section will help you organize your cases, and you can also remind yourself of the case with a notification.";
+"textInstruction3" = "This section swhows all your activity in thee application. Everythingg that you have entered wil be processed and will be shown in this section.";
+

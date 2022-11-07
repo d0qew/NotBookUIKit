@@ -24,18 +24,20 @@ class FinancyClass: FinancyProtocol {
     
     var key: String
     var array: [[String : Any]]{
-        set
-        {
-            UserDefaults.standard.set(newValue, forKey: key)
-            UserDefaults.standard.synchronize()
-        }
-        get
-        {
+        get{
+            // безопасно проверяем соответствует ли записанный в память массив типу [[String: Any]]
             if let array = UserDefaults.standard.array(forKey: key) as? [[String : Any]] {
                 return array
             }else {
+            // если такого не существует возвращает пустой массив
                 return []
             }
+            
+        }
+        set{
+            // при изменении массива изменяет записанный массив в памяти
+            UserDefaults.standard.set(newValue, forKey: key)
+            UserDefaults.standard.synchronize()
         }
     }
     
@@ -50,7 +52,6 @@ class FinancyClass: FinancyProtocol {
     init(key: String) {
         self.key = key
     }
-    
 }
 
 

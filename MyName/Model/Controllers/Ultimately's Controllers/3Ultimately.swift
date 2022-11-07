@@ -54,7 +54,7 @@ class UltimatelyViewController: UIViewController {
         
         if rersultForAlert()
         {
-            let alertControllerUl = UIAlertController(title: "Good job", message: "You can buy sweets or \n add new Goal for money!", preferredStyle: .alert)
+            let alertControllerUl = UIAlertController(title: NSLocalizedString("textCupon", comment: ""), message: NSLocalizedString("textAboutCupon", comment: ""), preferredStyle: .alert)
             let alertActionFirstUl =  UIAlertAction(title: "OK", style: .default) {(alert) in
                 
             }
@@ -126,8 +126,9 @@ class UltimatelyViewController: UIViewController {
     private func switchCurrrecy() {
         
         //error pars(сервер упал, либо подключение к интернету отстутвует)
-        let alertControllerError = UIAlertController(title: "Error", message: "Problems connecting to the server! \n Check internet connection.", preferredStyle: .alert)
+        let alertControllerError = UIAlertController(title: NSLocalizedString("textOops", comment: ""), message: NSLocalizedString("textProblem", comment: ""), preferredStyle: .alert)
         let alertActionOK =  UIAlertAction(title: "OK", style: .default) {(alert) in
+            self.viewWillAppear(true)
         }
         alertControllerError.addAction(alertActionOK)
         
