@@ -9,6 +9,7 @@ import UIKit
 
 class ExpensesTableViewController: UITableViewController {
     
+    // алерт создания нового элемента
     @IBAction func pushNewExpenses(_ sender: Any) {
         let alertAddNewItem = UIAlertController(title: NSLocalizedString("textCreateItem", comment: ""), message: nil, preferredStyle: .alert)
         alertAddNewItem.addTextField{(textField) in

@@ -8,7 +8,9 @@
 import UIKit
 
 class FirstGoalTableViewController: UITableViewController {
-    // алерт для добавления новой цели для денег
+    
+   // алерт создания нового элемента
+    
     @IBAction func pushNewGoalMoney(_ sender: Any) {
         let alertAddNewItem = UIAlertController(title: NSLocalizedString("textCreateItem", comment: ""), message: nil, preferredStyle: .alert)
         alertAddNewItem.addTextField{(textField) in
@@ -20,7 +22,7 @@ class FirstGoalTableViewController: UITableViewController {
         let alertActionFirst =  UIAlertAction(title: NSLocalizedString("textCancel", comment: ""), style: .default) { (alert) in
         }
         let alertActionSecond =  UIAlertAction(title: NSLocalizedString("textAdd", comment: ""), style: .cancel) { (alert) in
-            // create new
+            // создание нового элемента
             let newItemName = alertAddNewItem.textFields![0].text
             let newItemPrice = alertAddNewItem.textFields![1].text
             goalMoney.addItem(nameItem: newItemName!, price: Int(newItemPrice!) ?? 0)

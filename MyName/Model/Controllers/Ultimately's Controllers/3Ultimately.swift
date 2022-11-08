@@ -35,14 +35,13 @@ class UltimatelyViewController: UIViewController {
         
         labelDailyGoal.text = resultGoals(dailyTasks.array)
         lableMounthlyGoal.text = resultGoals(monthlyTasks.array)
-        // Do any additional setup after loading the view.
     }
     
    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // standart value for currency
+        // установка дефолтного значения валюты
         currency = "RUB"
         
         drawCircle()
@@ -81,7 +80,7 @@ class UltimatelyViewController: UIViewController {
     private func drawCircle() {
         let center = CGPoint(x: 100, y: 180)
         
-        // lable результат % in cirrcle
+        // lable результат % в круговой диаграмме
         
         view.addSubview(labelResultCircle)
         labelResultCircle.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
