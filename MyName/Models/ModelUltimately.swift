@@ -43,7 +43,7 @@ func resultBudget() -> String{
 }
 
 // Вычисление проверки, выдачи Alert(Купон)
-func rersultForAlert() -> Bool{
+func resultForAlert() -> Bool{
     if Int(ultimatelyResultMoney(goalMoney.array))! != 0 {
         return Int(ultimatelyResultMoney(savedMoneyProduct.array))! >= Int(ultimatelyResultMoney(goalMoney.array))!
     }else{

@@ -83,19 +83,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		63347AB928FC2AE200C26B44 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				635AEF5928DC8039001887BF /* AppDelegate.swift */,
-				635AEF5B28DC8039001887BF /* SceneDelegate.swift */,
-				6383E8F129056FFD00B3D41C /* Models */,
-				63C31B5728F5A05A009543CF /* Controllers */,
-				63347ABA28FC2B0E00C26B44 /* View */,
-				639E749029195B6B00130826 /* Localizable.strings */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		63347ABA28FC2B0E00C26B44 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +114,12 @@
 			isa = PBXGroup;
 			children = (
 				637526EE28EDD2D90021E62C /* Info.plist */,
-				63347AB928FC2AE200C26B44 /* Model */,
+				635AEF5928DC8039001887BF /* AppDelegate.swift */,
+				635AEF5B28DC8039001887BF /* SceneDelegate.swift */,
+				6383E8F129056FFD00B3D41C /* Models */,
+				63C31B5728F5A05A009543CF /* Controllers */,
+				63347ABA28FC2B0E00C26B44 /* View */,
+				639E749029195B6B00130826 /* Localizable.strings */,
 			);
 			path = MyName;
 			sourceTree = "<group>";

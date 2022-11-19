@@ -9,15 +9,15 @@ import UIKit
 import UserNotifications
 
 class NatificationTableViewController: UIViewController, UIGestureRecognizerDelegate {
-    
+    // Связь с объектами экрана
     @IBOutlet weak var titleTF: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
-    
+    // подключение центра уведомлений
     let notificationCenter = UNUserNotificationCenter.current()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        
         notificationCenter.requestAuthorization(options: [.alert, .sound]) { permissionGranted, error in
             if (!permissionGranted)
             {
@@ -29,11 +29,15 @@ class NatificationTableViewController: UIViewController, UIGestureRecognizerDele
         swipeDown.direction = UISwipeGestureRecognizer.Direction.down
         self.view.addGestureRecognizer(swipeDown)
     }
-    
+    // метод сохраниеня уведомления
     @IBAction func saveActionNutificatio(_ sender: Any) {
         notificationCenter.getNotificationSettings { (settings) in
+            // ассинхронное установление задачи в очередь main
             DispatchQueue.main.async { [self] in
-                
+                // очистка текстфилда после записи в удедомление
+                defer {
+                    self.titleTF.text = ""
+                }
                 
                 let title = self.titleTF.text!
                 let date = self.datePicker.date
@@ -62,8 +66,7 @@ class NatificationTableViewController: UIViewController, UIGestureRecognizerDele
                 {
                     let ac = UIAlertController(title: NSLocalizedString("textAlertTitle1", comment: ""), message: NSLocalizedString("textAlertBody1", comment: ""), preferredStyle: .alert)
                     let goToSettings = UIAlertAction(title: NSLocalizedString("textSettings", comment: ""), style: .default)
-                    {
-                        (_) in
+                    { (_) in
                         guard let settingsURL = URL(string: UIApplication.openSettingsURLString)
                         else
                         {
@@ -81,16 +84,18 @@ class NatificationTableViewController: UIViewController, UIGestureRecognizerDele
             }
         }
     }
-    
+    // приведение установленной даты к определенному формату
     func formattedDate(date: Date) -> String
     {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMM y HH:mm"
         return formatter.string(from: date)
     }
+    // распознователь жестов
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
+    // свайп вниз
     @objc func hideKeyboardOnSwipeDown() {
         view.endEditing(true)
     }
