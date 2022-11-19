@@ -15,7 +15,6 @@ class InstructionViewController: UIViewController {
         super.viewDidLoad()
         textInstruction3.text = NSLocalizedString("textInstruction3", comment: "")
     }
-    
     @IBAction func backToRoot(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }

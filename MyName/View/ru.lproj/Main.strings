@@ -177,7 +177,7 @@
 "scU-th-5PR.text" = "Title";
 
 /* Class = "UILabel"; text = "Daily Tasks Completed:"; ObjectID = "tXO-Hp-IP0"; */
-"tXO-Hp-IP0.text" = "Выполнено задач дня:";
+"tXO-Hp-IP0.text" = "Выполнено задач дня :";
 
 /* Class = "UILabel"; text = "What is Ultimately?"; ObjectID = "vrd-uc-A72"; */
 "vrd-uc-A72.text" = "Что такое Главная?";

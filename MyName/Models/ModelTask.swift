@@ -57,10 +57,6 @@ class TasksClass: TasksProtocol {
 var dailyTasks = TasksClass(key: "dailyTasksDataKey")
 
 
-
-
-
-
 // MARK: - TABLE VIEW 2.2
 var monthlyTasks = TasksClass(key: "mounthlyTasksDataKey")
 

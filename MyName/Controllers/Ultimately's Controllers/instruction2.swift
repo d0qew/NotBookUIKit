@@ -12,7 +12,6 @@ class instruction2: UIViewController {
     @IBOutlet var instruction2: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         instruction2.text = NSLocalizedString("textInstruction2", comment: "")
     }
 }
