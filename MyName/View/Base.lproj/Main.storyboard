@@ -720,6 +720,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="aWJ-7j-QV9">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96579009289999995" green="0.84272676710000005" blue="0.63917565350000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="b5q-cQ-iP4" kind="relationship" relationship="rootViewController" id="bNf-7V-z4x"/>
@@ -745,6 +746,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="y5l-l4-7yG">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96579009289999995" green="0.84272676710000005" blue="0.63917565350000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="A5W-tk-EIa" kind="relationship" relationship="rootViewController" id="QG9-hT-1Ap"/>
@@ -763,6 +765,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ors-f1-iwJ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96579009289999995" green="0.84272676710000005" blue="0.63917565350000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="7gG-97-d69" kind="relationship" relationship="rootViewController" id="djc-hn-hYL"/>
@@ -780,6 +783,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ju2-mM-oVO">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.96579009289999995" green="0.84272676710000005" blue="0.63917565350000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="initialIndex">
